@@ -84,7 +84,7 @@ function Car(model, milesPerGallon){
 }
       
   Car.prototype.fill = function(gallons){
-      
+      this.tank += gallons
   }
  
   
@@ -99,14 +99,12 @@ function Car(model, milesPerGallon){
     this.name = name
     this.age = age 
     this.favoriteToy = favoriteToy
-    
   }
   Baby.prototype = Object.create(Person.prototype)
   
 
   Baby.prototype.play = function(favoriteToy){
-    return `Playing with ${this.favoriteToy}`
-   
+    return `Playing with ${this.favoriteToy}` 
  }
 
   
